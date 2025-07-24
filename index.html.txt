@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Female Makeover Services</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #fefafc;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff69b4;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #ff69b4;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ff69b4;
+            padding-bottom: 5px;
+        }
+
+        /* Services list styling */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1 1 250px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-price {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Appointment form styling */
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        form h3 {
+            margin-bottom: 15px;
+            color: #ff69b4;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff85c1;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Female Makeover Studio</h1>
+    <nav>
+        <a href="#services">Services & Pricing</a>
+        <a href="#appointment">Book Appointment</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Services & Pricing -->
+    <section id="services">
+        <h2>Our Services & Pricing</h2>
+        <div class="services">
+            <div class="service-card">
+                <div class="service-title">Hair Styling</div>
+                <div class="service-price">$30 - $100</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Makeup Artist</div>
+                <div class="service-price">$50 - $200</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Facial & Skin Care</div>
+                <div class="service-price">$40 - $150</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Manicure & Pedicure</div>
+                <div class="service-price">$20 - $80</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Bridal Makeover</div>
+                <div class="service-price">$150 - $500</div>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </section>
+
+    <!-- Appointment Booking Form -->
+    <section id="appointment">
+        <h2>Book Your Appointment</h2>
+        <form id="appointmentForm" onsubmit="return submitForm()">
+            <h3>Fill in your details</h3>
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form-group">
+                <label for="service">Select Service *</label>
+                <select id="service" name="service" required>
+                    <option value="">--Please choose a service--</option>
+                    <option value="Hair Styling">Hair Styling</option>
+                    <option value="Makeup Artist">Makeup Artist</option>
+                    <option value="Facial & Skin Care">Facial & Skin Care</option>
+                    <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+                    <option value="Bridal Makeover">Bridal Makeover</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date *</label>
+                <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Time *</label>
+                <input type="time" id="time" name="time" required />
+            </div>
+            <div class="form-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Any special requests or details..."></textarea>
+            </div>
+            <button type="submit">Submit Booking</button>
+        </form>
+        <div id="confirmation" style="margin-top:20px; display:none;">
+            <h3>Thank you! Your appointment has been booked.</h3>
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Female Makeover Studio. All rights reserved.</p>
+</footer>
+
+<script>
+    function submitForm() {
+        // Basic form submission handler
+        const form = document.getElementById('appointmentForm');
+        if (form.checkValidity()) {
+            // Normally, here you would send form data to your server
+            // For demo, just show a confirmation message
+            document.getElementById('confirmation').style.display = 'block';
+            form.reset();
+            return false; // prevent actual form submission
+        }
+        return true;
+    }
+</script>
+
+</body>
+</html>
